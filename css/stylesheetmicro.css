@@ -1,0 +1,111 @@
+/*fonts*/
+
+@font-face {
+    font-family: 'open_sans';
+   src: url('../fonts/opensans-regular-webfont.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+  }
+   
+  @font-face {
+   font-family: 'open_sans';
+   src: url('../fonts/opensans-bold-webfont.woff2') format('woff2');
+   font-weight: bold;
+   font-style: normal;
+  }
+  
+  @font-face {
+   font-family: 'poppins';
+   src: url('../fonts/poppins-regular-webfont.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+  }
+  
+  @font-face {
+   font-family: 'poppins';
+   src: url('../fonts/poppins-bold-webfont.woff2') format('woff2');
+   font-weight: bold;
+   font-style: normal;
+  }
+  li, p {
+      font-family: 'open_sans';
+  }
+
+  h1, h2 {
+      font-family: 'poppins';
+  }
+
+  a {
+      text-decoration: none;
+      color: #316AC1;
+  }
+
+  a:hover {
+      color: rgb(123, 123, 235);
+  }
+
+  a:active {
+      color: rgb(171, 171, 207);
+  }
+
+/*image sizing*/
+
+.images {
+    max-width: 100%; 
+    height: auto;
+}
+
+/*general*/
+
+.numbers {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'poppins';
+}
+
+#header {
+    margin: 2rem 0 0 2rem;
+}
+
+/*flexing*/
+
+#flexy {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #acc7f0;
+    border-radius: 1rem;
+    margin: 2rem 2rem 0;
+}
+
+#triggers, #rules, #feedback, #loops {
+    margin: 1rem 0;
+}
+
+/*griding*/
+
+#content {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'first second'
+    'third fourth';
+    gap: 1rem 1rem;
+    margin: 0 3rem 2rem 2rem;
+}
+
+#first {
+    grid-area: first;
+}
+
+#second {
+    grid-area: second;
+}
+
+#third {
+    grid-area: third;
+}
+
+#fourth {
+    grid-area: fourth;
+}
