@@ -1,7 +1,7 @@
 /*fonts*/
 
 @font-face {
-    font-family: 'open_sans';
+   font-family: 'open_sans';
    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2');
    font-weight: normal;
    font-style: normal;
@@ -72,6 +72,7 @@
 
 #flexy {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #acc7f0;
     border-radius: 1rem;
@@ -79,33 +80,23 @@
 }
 
 #triggers, #rules, #feedback, #loops {
-    margin: 1rem 0;
+    margin: 1rem 2rem 1rem 0;
 }
 
-/*griding*/
+#triggers h2, #rules h2, #feedback h2, #loops h2{
+    text-align: center;
+}
 
 #content {
-    display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 'first second'
-    'third fourth';
-    gap: 1rem 1rem;
-    margin: 0 3rem 2rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 2rem 2rem 2rem;
 }
 
-#first {
-    grid-area: first;
-}
+/*responsive*/
 
-#second {
-    grid-area: second;
-}
-
-#third {
-    grid-area: third;
-}
-
-#fourth {
-    grid-area: fourth;
-}
+@media (max-width: 500px) {
+    #flexy {
+        flex-direction: column;
+    }}
