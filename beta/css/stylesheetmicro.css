@@ -1,0 +1,260 @@
+/*fonts*/
+
+@font-face {
+   font-family: 'open_sans';
+   src: url('../fonts/opensans-regular-webfont.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+  }
+   
+  @font-face {
+   font-family: 'open_sans';
+   src: url('../fonts/opensans-bold-webfont.woff2') format('woff2');
+   font-weight: bold;
+   font-style: normal;
+  }
+  
+  @font-face {
+   font-family: 'poppins';
+   src: url('../fonts/poppins-regular-webfont.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+  }
+  
+  @font-face {
+   font-family: 'poppins';
+   src: url('../fonts/poppins-bold-webfont.woff2') format('woff2');
+   font-weight: bold;
+   font-style: normal;
+  }
+  li, p, button {
+      font-family: 'open_sans';
+  }
+
+  h1, h2 {
+      font-family: 'poppins';
+  }
+
+  a {
+      text-decoration: none;
+      color: #316AC1;
+  }
+
+  a:hover {
+      color: rgb(123, 123, 235);
+  }
+
+  a:active {
+      color: rgb(171, 171, 207);
+  }
+
+/*image sizing*/
+
+.images {
+    max-width: 100%; 
+    height: auto;
+}
+
+/*general*/
+
+.numbers {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'poppins';
+}
+
+#header {
+    margin: 2rem 0 0 2rem;
+}
+
+
+#hover, #click {
+  margin-left: 2rem;
+}
+
+/*flexing*/
+
+#flexy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #acc7f0;
+    border-radius: 1rem;
+    margin: 2rem 2rem 0;
+    padding: 0 1rem;
+}
+
+#triggers, #rules, #feedback, #loops {
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+}
+
+/*#rules ul, #feedback ul{
+  max-width: 50%;
+}*/
+
+#triggers ul, #rules ul, #feedback ul, #loops ul{
+  padding: 0;
+}
+
+#triggers h2, #rules h2, #feedback h2, #loops h2{
+    text-align: center;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 2rem 2rem 2rem;
+}
+
+#content_click {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 2rem 2rem 2rem;
+}
+
+#interaction {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/*responsive*/
+
+@media (max-width: 500px) {
+    #flexy {
+        flex-direction: column;
+    }
+}
+
+/*button boi*/
+
+#button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    margin: 100px 0 80px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #316AC1;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s;
+  }
+
+#button:focus {
+    outline: 0;
+  }
+
+#button:before, #button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+
+#button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #316AC1 20%, transparent 20%), radial-gradient(circle, #316AC1 90%, transparent 10%),
+    radial-gradient(ellipse, transparent 20%, #316AC1 20%, transparent 30%), 
+    radial-gradient(circle, #316AC1 20%, transparent 20%), radial-gradient(circle, #316AC1 90%, transparent 10%),
+    radial-gradient(ellipse, transparent 10%, #316AC1 15%, transparent 20%),  
+    radial-gradient(circle, #316AC1 20%, transparent 20%), radial-gradient(circle, #316AC1 90%, transparent 10%);
+    background-size: 10% 10%, 1% 40%, 
+    10% 37%,
+    15% 15%, 1% 40%, 
+    13% 37%, 
+    15% 15%, 1% 40%;
+  }
+#button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #316AC1 20%, transparent 20%), radial-gradient(circle, #316AC1 90%, transparent 10%),
+    radial-gradient(circle, #316AC1 20%, transparent 20%), radial-gradient(circle, #316AC1 90%, transparent 10%),
+    radial-gradient(circle, #316AC1 20%, transparent 20%), radial-gradient(circle, #316AC1 90%, transparent 10%),
+    radial-gradient(circle, transparent 10%, #316AC1 15%, transparent 20%), radial-gradient(circle, #316AC1 90%, transparent 10%),
+    radial-gradient(circle, #316AC1 20%, transparent 20%), radial-gradient(circle, #316AC1 90%, transparent 10%);
+    background-size: 15% 15%, 1% 40%, 
+    20% 20%, 1% 40%,
+    18% 18%, 1% 40%, 
+    20% 20%, 1% 40%,
+    20% 20%, 1% 40%;
+  }
+
+#button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 1.5s forwards;
+}
+
+#button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 1.5s forwards;
+}
+  
+@keyframes topBubbles {
+    0% {
+      background-position: 
+      5% 90%, 10% 90%, 
+      10% 90%, 
+      10% 90%, 16% 90%,
+      25% 90%,  
+      70% 90%, 68% 90%;
+    }
+    50% {
+      background-position: 
+      0% 80%, 2.9% 80%, 
+      0% 20%, 
+      10% 40%, 14.5% 30%,
+      30% 30%, 
+      90% 30%, 87% 20%;
+    }
+    100% {
+      background-position: 
+      0% 70%, -10% 70%, 
+      0% 10%, 
+      10% 30%, 7% 20%,
+      30% 20%,  
+      90% 20%, 90% 25%;
+      background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+    }
+}
+
+@keyframes bottomBubbles {
+    0% {
+      background-position: 
+      10% -10%, 18% -25%, 
+      30% 10%, 35% -15%,
+      55% -10%, 55% -10%,
+      70% -10%, 67% -30%,
+      85% -10%, 80% -50%;
+    }
+    50% {
+      background-position: 
+      0% 80%, 5% 95%, 
+      20% 80%, 24.5% 70%,
+      45% 60%, 46% 65%,
+      60% 100%, 60% 100%,
+      75% 70%, 73% 65%;
+    }
+    100% {
+      background-position: 
+      0% 90%, -1% 105%, 
+      20% 90%, 19% 75%,
+      45% 70%, 46% 75%,
+      60% 110%, 60% 110%
+      75% 80%, 73% 75%;
+      background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+    }
+}
