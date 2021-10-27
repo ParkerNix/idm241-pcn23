@@ -83,18 +83,18 @@
     border-radius: 1rem;
     margin: 2rem 2rem 0;
     padding: 0 1rem;
+    gap: 2rem;
 }
 
 #triggers, #rules, #feedback, #loops {
     margin: 1rem 0 1rem 0;
-    text-align: center;
 }
 
 /*#rules ul, #feedback ul{
   max-width: 50%;
 }*/
 
-#triggers ul, #rules ul, #feedback ul, #loops ul{
+.mainlist{
   padding: 0;
 }
 
@@ -127,6 +127,11 @@
 @media (max-width: 500px) {
     #flexy {
         flex-direction: column;
+        gap: 0;
+    }
+
+    #triggers ul, #rules ul, #feedback ul, #loops ul{
+      padding: 0 0 0 2rem;
     }
 }
 
