@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <head>
-    <link rel= "Normalizer" href= "../css/normalizer.css"/>
-    <link rel= "stylesheet" href= "../css/stylesheetmicro.css"/>
+    <link rel= "Normalizer" href= "../css/normalizer.css">
+    <link rel= "stylesheet" href= "../css/stylesheetmicro.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Beta Build</title>
+    <title>Final Build</title>
 </head>
 <body>
+
     <div id="header">
         <h1><a href="https://musescore.com/user/3803751/scores/1378366" target="_blank">Musescore.com</a></h1>
     </div>
     <div id="interaction">
-        <button id="button" data-modal="#modal" class="modal__trigger">Download</button>
+        <button id="button" data-modal="#modal" class="modal__trigger" onclick="uncheck()">Download</button>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="ms-container">
+                <label for="ms-download">
+                    <div class="ms-content">
+                        <div class="ms-content-inside">
+                            <input type="checkbox" id="ms-download" />
+                            <div class="ms-line-down-container">
+                                <div class="ms-line-down"></div>
+                            </div>
+                            <div class="ms-line-point"></div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
     </div>
     	<!-- Modal -->
 	<div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
@@ -19,21 +37,16 @@
 			<div class="modal__content">
 				<h2>Download this score</h2>
 				<p>This score can be downloaded in a format of your preference:</p>
-                <a href="#">
-                    <div><h2 class="modalheader">Musescore</h2>
-                <p>Opens in Musescore</p></div></a>
-                <a href="#">
-                    <div><h2 class="modalheader">PDF</h2>
-                <p>View and print</p></div></a>
-                <a href="#">
-                    <div><h2 class="modalheader">MusicXML</h2>
-                <p>Opens in various software</p></div></a>
-                <a href="#">
-                    <div><h2 class="modalheader">MIDI</h2>
-                <p>Opens in editors and sequencers</p></div></a>
-                <a href="#">
-                    <div><h2 class="modalheader">Audio</h2>
-                <p>Listen to this score</p></div></a>
+                    <div><button class="option" onclick="func1(event)"><h2 class="modalheader modal__close">PDF</h2>
+                    <p>View and print</p></button></div>
+                    <div><button class="option" onclick="func1(event)"><h2 class="modalheader modal__close">MusicXML</h2>
+                    <p>Opens in various software</p></button></div>
+                    <div><button class="option" onclick="func1(event)"><h2 class="modalheader modal__close">MIDI</h2>
+                    <p>Opens in editors and sequencers</p></button></div>
+                    <div><button class="option" onclick="func1(event)"><h2 class="modalheader modal__close">Audio</h2>
+                    <p>Listen to this score</p></button></div>
+                    <div><button class="option" onclick="func1(event)"><h2 class="modalheader modal__close">Musescore</h2>
+                    <p>Opens in Musescore</p></button></div>
 				
 				<!-- modal close button -->
 				<a href="" class="modal__close demo-close">
@@ -54,14 +67,14 @@
         <div id="rules">
             <h2>RULES</h2>
             <ul class="mainlist">
-                <li>Hover</li>
+                <li>Hover on "Download"</li>
                 <ul>
                     <li>Music notes fly out from<br>
                         behind the button</li>
                     <li>Notes fade out after some time</li>
                     <li>Cursor changes to pointer</li>
                 </ul>
-                <li>Click</li>
+                <li>Click on "Download"</li>
                 <ul>
                     <li>"Download" button changes to<br> 
                         a lighter blue while active</li>
@@ -76,20 +89,37 @@
                         causes the modal to shrink back<br>
                         into the download button and the<br>
                         background to disappear</li>
+                </ul>
+                <li>Hover on options in modal</li>
+                <ul>
+                    <li>Light-blue background appears</li>
+                </ul>
+                <li>Click on options in modal</li>
+                <ul>
+                    <li>Modal closes</li>
+                    <li>A circle with a line and a dot<br>
+                        appear, dot moves to the top</li>
+                    <li>The stroke of the circle turns<br>
+                        white after a bit</li>
+                    <li>The line turns into a checkmark</li>
+                    <li>"Downloaded file" will be logged in<br>
+                        the console</li>
+                    <li>Checkmark stays till modal is<br>
+                        opened again or page is reloaded</li>
                 </ul>
             </ul>
         </div>
         <div id="feedback">
             <h2>FEEDBACK</h2>
             <ul class="mainlist">
-                <li>Hover</li>
+                <li>Hover on "Download"</li>
                 <ul>
                     <li>Music notes fly out from<br>
                         behind the button</li>
                     <li>Notes fade out after some time</li>
                     <li>Cursor changes to pointer</li>
                 </ul>
-                <li>Click</li>
+                <li>Click on "Download"</li>
                 <ul>
                     <li>"Download" button changes to<br> 
                         a lighter blue while active</li>
@@ -105,12 +135,27 @@
                         into the download button and the<br>
                         background to disappear</li>
                 </ul>
+                <li>Hover on options in modal</li>
+                <ul>
+                    <li>Light-blue background appears</li>
+                </ul>
+                <li>Click on options in modal</li>
+                <ul>
+                    <li>Modal closes</li>
+                    <li>A circle with a line and a dot<br>
+                        appear, dot moves to the top</li>
+                    <li>The stroke of the circle turns<br>
+                        white after a bit</li>
+                    <li>The line turns into a checkmark</li>
+                    <li>Checkmark stays till modal is<br>
+                        opened again or page is reloaded</li>
             </ul>
         </div>
         <div id=loops>
             <h2>LOOPS/MODES</h2>
-            <ul>
-                <li>None</li>
+            <ul class="mainlist">
+                <li>Download modal expands and<br> 
+                    expands out from the "Download" button</li>
             </ul>
         </div>
     </div>
@@ -131,4 +176,5 @@
     </div>-->
     <script src="../Scripty.js"></script>
     <script src="../script.js"></script>
+    <script src="../scriptiest.js"></script>
 </body>
