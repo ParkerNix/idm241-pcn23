@@ -396,6 +396,11 @@
 .option {
   width: 100%;
   text-align: left;
+  background-color: #ffffff;
+}
+
+.option:hover {
+  background-color: lightblue;
 }
 body {
 	width: 100%;
@@ -405,7 +410,7 @@ body {
 }
 #ms-container {
 	width: 100%;
-	height: 100vh;
+	height: 300px;
 }
 
 .ms-content {

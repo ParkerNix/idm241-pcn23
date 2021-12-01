@@ -167,6 +167,8 @@ var Modal = (function() {
         });
       }, contentDelay - 50);
     }
+    console.log("close");
+    func1(event);
 
   };
 
