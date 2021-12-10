@@ -1,0 +1,125 @@
+<head>
+    <link rel= "stylesheet" href= "css/stylesheetmicro.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div class="casebody">
+        <h1>Case Study</h1>
+        <div class="section">
+            <h2>Overview</h2>
+            <p>In this project, I was to create a complex micro-interaction to add to a page of my choice. In my 
+                case, I used Musescore.org, specifically the download button that appears on the details page for each
+                 piece. In ten weeks, I added parts to my micro-interaction by first designing each action and then 
+                 using the design as a base point to code out a working build. In my work, I made a confetti animation 
+                 that plays when hovering on the “download” button, a modal that pops up when you click it, and a 
+                 download animation that plays when you choose a file format to download. In the end, I came out with 
+                 a successful build that makes the process of downloading a piece much more interesting and satisfying 
+                 for the user.</p>
+        </div>
+        <div class="section">
+            <h2>Context and Challenges</h2>
+            <p class="case">For my project, I was to create a complex micro-interaction over the course of 10 weeks. 
+                The purpose of this project was to gain a better understanding of how to make a simple interaction on 
+                a page (such as hitting a button or loading a page) feel more satisfying for the user.
+            In my case, I was working by myself on a micro-interaction for a website called Musescore.org. This site 
+            offers users the opportunity to find sheet music from any genre and for any instrument. My particular 
+            focus for the project was the interaction of downloading the sheet music.
+            When I first saw the page, I tried clicking on the button. The look of the page was fine, but I found 
+            the interaction to be a bit boring and it didn’t really leave a lasting impression on me. Therefore, 
+            my goal with this project became making the process of downloading sheet music fun and memorable for 
+            the user without getting in the way or causing the user to wait through long animations. The main factors 
+            that needed to call the project done included; having all of my animations functioning, writing a detailed 
+            description of the whole interaction, and having the interaction that I code match with the description that 
+            I write.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Process and Insight</h2>
+            <div class="process">
+                <img class="images" src="images/Step 2.png" alt="Step 2">
+                <p>To start, I designed the general look of the first animation that I wanted, which was a music note 
+                confetti animation that would play when you hover on the download button. I decided to go with it 
+                being on hover because it was the best time to see it for the user. Clicking on the button was 
+                planned to open a modal at this point, so if you click there would be no way to see it. I also 
+                wrote a description of what should happen in the interaction, which would later help to define the 
+                goals this initial phase of the project.</p>
+            </div>
+            <div class="processRev">
+                <img class="images" src="images/AlphaBuild.png" alt="Alpha">
+                <p>After this, built out the interaction I described. I used a working sample from user Daisy on 
+                Codepen for a start on how to code out the interaction. Coding this sample into my page was a 
+                challenge, specifically because I had to really dig into the code for the animations to find a way 
+                to put the line on each of the notes, as the user just had circles for their confetti. I was able 
+                to accomplish this mostly through trial and error, changing each setting to see what moves or 
+                changes what. It gave me a deeper understanding of how Daisy made the code and how I could do it 
+                in the future.</p>
+            </div>
+            <div class="process">
+                <img class="images" src="images/Step 15.png" alt="Step 14">
+                <p>For the next phase, I wanted to implement a modal animation. When you download sheet music from 
+                Musescore.org, they have a modal that asks you what format you’d like to download (PDF, MIDI, etc.). 
+                This was a good place to add in animation because I thought it would make more sense for the modal 
+                to grow outward from the button, as the website just has it fade in from the center of the screen. 
+                This would make it more clear that the modal is meant to be connected to the process of downloading 
+                sheet music.</p>
+            </div>
+            <div class="processRev">
+                <img class="images big" src="images/BetaBuild.png" alt="Beta">
+                <p>When I was building this part of the micro-interaction, I used a working sample from another user of 
+                Codepen, Ettrics. This sample had a few different examples of the modal, but what I liked was that 
+                you could see the modal come out from the button. The main challenge with coding this part 
+                implementing it and making it responsive. The Javascript file for this sample was longer and much more 
+                complex, so I had to read through it carefully to understand what each thing did. A technique that 
+                helped me was taking a picture of the variables as they were defined in the beginning of the code, and 
+                looking at it as I read the code so I wouldn’t get lost and have to keep scrolling up and down to see 
+                what each variable is.</p>
+            </div>
+            <div class="process">
+                <img class="images" src="images/Step 9.png" alt="Step 8">
+                <p>The last phase was to finish the project out by showing a downloading animation when the user picks a 
+                file type to download. At the time of this project, there is no particular animation that happens when 
+                you download a file. This was an opportunity to give the user something to look at when waiting for the 
+                file to download that will leave a lasting impression.</p>
+            </div>
+            <div class="processRev">
+                <img class="images big" src="images/FinalBuild.png" alt="Final">
+                <p>Building this phase out was probably the hardest. I took a bit to find a sample before deciding to work 
+                with a downloading animation made by Matthew Sechrest on Codepen. The challenge here was that this 
+                sample didn’t use any Javascript, and it was activated by clicking an icon which would check a box. 
+                This meant that I needed to go through and figure out how to make the animations activate without the 
+                checkbox, then figure out how to activate it with the buttons in the modal and make it disappear when 
+                the animation was done. This part required a lot of patience, and I needed a lot of help from my 
+                professor, as well as friends and of course, Google.</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>The Solution</h2>
+            <a href="http://parkerishere.com/IDM241/Final/build/"><p>Link to the final product</p></a>
+            <p>My final micro-interaction has a “download” button at the top. This is the build that I made over the 
+                course of the ten weeks. Hovering on the button will show a quick music note confetti animation that adds 
+                a bit of flair right at the beginning of your journey with the button. Clicking it will cause a modal to 
+                expand out from the button, giving you a few options for how you want to download the piece. This clearly 
+                shows you that the modal is linked to the action of downloading a piece, as well as just making it a bit 
+                more intriguing to look at. Finally, clicking on any option gives you a downloading animation. This will 
+                play all the way through and disappear when it’s finished, letting you know that your download is done and 
+                that the button has successfully helped you achieve your goals. At the bottom of the page is a description 
+                of what will happen when you interact with it.</p>
+        </div>
+        <div class="section">
+            <h2>Results</h2>
+            <p>In the end, I found that my project was successful. My interaction works and is consistent with the 
+                description that I set. Furthermore, I feel that my interaction adds personality to the page and makes the 
+                interface a lot more memorable and satisfying. There are more things for the user to see that add intrigue. 
+                For instance, the hover effect where the confetti animation plays adds a fun aspect to the process of 
+                downloading a piece that before was more of an average interaction. This means that the user is more likely 
+                to come back and download more music when they need it. 
+                I’ve also learned a lot, specifically that you don’t have to code everything on a page on your own all the 
+                time. Sometimes, it can be better to just take a sample from a page or a build that someone else has made and 
+                use it as a starting point for your work. Also, I’ve seen that you have to be very patient with code 
+                sometimes and make sure you know what every part of the code does. I had many times where something wasn’t 
+                working and I had to really dig into the code to understand what part of it is messing up.
+                </p>
+        </div>
+    </div>
+</body>
