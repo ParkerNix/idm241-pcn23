@@ -438,7 +438,9 @@ body {
 	padding: 0;
 }
 
-
+.row {
+  color: rgba(0, 0, 0, 0.301);
+}
 #ms-container {
 	width: 100%;
 	height: 300px;
